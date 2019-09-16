@@ -13,7 +13,7 @@ export default {
   /**
    * @description 此处修改网站名称
    */
-  webName: 'EL-ADMIN',
+  webName: 'CODING',
   /**
    * @description 是否只保持一个子菜单的展开
    */
@@ -21,7 +21,7 @@ export default {
   /**
    * @description token key
    */
-  TokenKey: 'EL-ADMIN-TOEKN',
+  TokenKey: 'CODING-TOEKN',
 
   /**
    * @description 请求超时时间，毫秒（默认2分钟）
@@ -36,7 +36,7 @@ export default {
   /**
    * @description 固定头部
    */
-  fixedHeader: false,
+  fixedHeader: true,
 
   /**
    * @description 是否显示logo
@@ -46,7 +46,7 @@ export default {
   /**
    * 是否显示设置的悬浮按钮
    */
-  settingBtn: true,
+  settingBtn: false,
 
   /**
    * 是否显示设置的底部信息
@@ -56,10 +56,10 @@ export default {
   /**
    * 底部文字，支持html语法
    */
-  footerTxt: '© 2019 Zheng Jie <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License 2.0</a>',
+  footerTxt: '© 2019 Zhang Rui <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Coding</a>',
 
   /**
    * 备案号
    */
-  caseNumber: '浙ICP备18005431号'
+  caseNumber: '.'
 }

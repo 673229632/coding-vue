@@ -20,7 +20,7 @@
           size="mini"
           type="warning"
           icon="el-icon-more"
-          @click="changExpand">{{ $parent.expand ? '折叠' : '展开' }}</el-button>
+          @click="changExpand">{{ expand ? '折叠' : '展开' }}</el-button>
         <eForm ref="form" :is-add="true"/>
       </div>
     </div>
@@ -90,7 +90,8 @@ export default {
           value: 'name'
         }
       ],
-      delLoading: false, expand: true
+      delLoading: false,
+      expand: true
     }
   },
   created() {
@@ -107,7 +108,7 @@ export default {
       const query = this.query
       const value = query.value
       this.params = { page: this.page, size: this.size, sort: sort }
-      if (value) { this.params['name'] = value }
+      if (value) { this.params['blurry'] = value }
       return true
     },
     subDelete(id) {

@@ -15,11 +15,11 @@
         <!--工具栏-->
         <div class="head-container">
           <!-- 搜索 -->
-          <el-input v-model="query.value" clearable placeholder="输入关键字搜索" style="width: 200px;" class="filter-item" @keyup.enter.native="toQuery"/>
-          <el-select v-model="query.type" clearable placeholder="类型" class="filter-item" style="width: 130px">
+          <el-input v-model="query.value" clearable placeholder="输入用户名/邮箱搜索" style="width: 200px;" class="filter-item" @keyup.enter.native="toQuery"/>
+          <el-select v-model="query.type" clearable placeholder="类型" class="filter-item" style="width: 130px;display: none;">
             <el-option v-for="item in queryTypeOptions" :key="item.key" :label="item.display_name" :value="item.key"/>
           </el-select>
-          <el-select v-model="query.enabled" clearable placeholder="状态" class="filter-item" style="width: 90px" @change="toQuery">
+          <el-select v-model="query.enabled" clearable placeholder="状态" class="filter-item" style="width: 90px;" @change="toQuery">
             <el-option v-for="item in enabledTypeOptions" :key="item.key" :label="item.display_name" :value="item.key"/>
           </el-select>
           <el-button class="filter-item" size="mini" type="success" icon="el-icon-search" @click="toQuery">搜索</el-button>
@@ -152,7 +152,12 @@ export default {
       const value = query.value
       const enabled = query.enabled
       this.params = { page: this.page, size: this.size, sort: sort, deptId: this.deptId }
-      if (type && value) { this.params[type] = value }
+      if (type) {
+        this.params.type = type
+      }
+      if (value) {
+        this.params.blurry = value
+      }
       if (enabled !== '' && enabled !== null) { this.params['enabled'] = enabled }
       return true
     },

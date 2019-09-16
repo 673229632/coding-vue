@@ -4,14 +4,13 @@
     <svg-icon v-if="isCollapse" icon-class="run" />
     <!--正常状态下显示的，可以使用本地的logoImg-->
     <div class="logo-con">
-      <img src="https://aurora-1255840532.cos.ap-chengdu.myqcloud.com/logo.png">
-      <!--<img :src="logoImg">-->
+      <img :src="logoImg">
     </div>
   </el-menu-item>
 </template>
 
 <script>
-// import logoImg from '@/assets/logo/logo.png'
+import logoImg from '@/assets/logo/logo.png'
 import { mapState } from 'vuex'
 export default {
   name: 'Logo',
@@ -23,7 +22,7 @@ export default {
   },
   data() {
     return {
-      // logoImg: logoImg
+      logoImg: logoImg
     }
   },
   computed: {

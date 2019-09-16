@@ -1,9 +1,8 @@
 {
-  "name": "eladmin",
+  "name": "coding",
   "version": "2.1.0",
   "license": "Apache-2.0",
-  "description": "eladmin 前端代码",
-  "author": "jie <elunez@qq.com>",
+  "description": "coding 前端代码",
   "scripts": {
     "dev": "cross-env BABEL_ENV=development webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "build": "cross-env NODE_ENV=production env_config=prod node build/build.js",
@@ -14,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/elunez/eladmin-qd"
+    "url": "https://github.com/673229632/coding-vue.git"
   },
   "dependencies": {
     "@riophae/vue-treeselect": "0.0.38",
@@ -30,6 +29,7 @@
     "jsencrypt": "^3.0.0-rc.1",
     "jszip": "3.1.5",
     "mavon-editor": "^2.7.0",
+    "nodemon": "^1.19.2",
     "normalize.css": "7.0.0",
     "nprogress": "0.2.0",
     "path-to-regexp": "2.4.0",

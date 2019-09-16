@@ -124,6 +124,7 @@ export default {
     z-index: 999999;
     right: 10px;
     bottom: 60px;
+    display: none;
   }
 </style>
 

@@ -36,6 +36,7 @@
 </template>
 
 <script>
+// import axios from 'axios'
 import SimpleDrawingBoard from 'simple-drawing-board'
 import html2canvas from 'html2canvas'
 export default {

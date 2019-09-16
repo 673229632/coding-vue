@@ -50,10 +50,10 @@ export default {
       this.url = 'api/logs'
       const sort = 'id,desc'
       const query = this.query
-      const type = query.type
+      // const type = query.type
       const value = query.value
       this.params = { page: this.page, size: this.size, sort: sort }
-      if (type && value) { this.params[type] = value }
+      if (value) { this.params.blurry = value }
       return true
     }
   }

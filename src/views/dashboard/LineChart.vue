@@ -35,7 +35,8 @@ export default {
         visitsData: [],
         ipData: []
       },
-      weekDays: []
+      weekDays: [],
+      dates: []
     }
   },
   mounted() {
@@ -43,6 +44,7 @@ export default {
       this.chartData.visitsData = res.visitsData
       this.chartData.ipData = res.ipData
       this.weekDays = res.weekDays
+      this.dates = res.dates
       this.initChart()
     })
     if (this.autoResize) {
@@ -80,7 +82,7 @@ export default {
     setOptions({ visitsData, ipData } = {}) {
       this.chart.setOption({
         xAxis: {
-          data: this.weekDays,
+          data: this.dates,
           boundaryGap: false,
           axisTick: {
             show: false
@@ -106,10 +108,10 @@ export default {
           }
         },
         legend: {
-          data: ['pv', 'ip']
+          data: ['访问量', '访问IP']
         },
         series: [{
-          name: 'pv', itemStyle: {
+          name: '访问量', itemStyle: {
             normal: {
               color: '#FF005A',
               lineStyle: {
@@ -125,7 +127,7 @@ export default {
           animationEasing: 'cubicInOut'
         },
         {
-          name: 'ip',
+          name: '访问IP',
           smooth: true,
           type: 'line',
           itemStyle: {
